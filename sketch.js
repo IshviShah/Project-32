@@ -15,6 +15,8 @@ var polyImg;
 
 var score = 0;
 
+var bg = "white";
+
 function preload(){
     polyImg = loadImage("polygon.png");
     getBackgroundImage();
@@ -87,6 +89,8 @@ function draw(){
     image(polyImg,poly.position.x,poly.position.y,40,40);
 
     slingshot.display();
+
+    if(bg){background(bg)}
 }
 
 
@@ -110,11 +114,11 @@ async function getBackgroundImage(){
     var datetime = responseJSON.datetime;
     var hour = datetime.slice(11,13);
 
-    if(hour>=06 && hour<=9){
-        background("yellow");
+    if(hour>=06 && hour<=18){
+        bg = "white";
     }
     else{
-        background ("black");
+        bg = "blue";
     }
    
     //console.log(bg);
