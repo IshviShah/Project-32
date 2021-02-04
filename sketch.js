@@ -53,7 +53,7 @@ function setup(){
 }
 
 function draw(){
-    background(0);
+    if (bg){background(bg)};
     Engine.update(engine);
 
     noStroke();
@@ -118,7 +118,7 @@ async function getBackgroundImage(){
         bg = "white";
     }
     else{
-        bg = "blue";
+        bg = "yellow";
     }
    
     //console.log(bg);
