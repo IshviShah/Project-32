@@ -58,7 +58,7 @@ function draw(){
 
     noStroke();
     textSize(35);
-    fill("white");
+    fill("pink");
     text("SCORE "+score,750,40);
 
     ground.display(); 
@@ -90,7 +90,7 @@ function draw(){
 
     slingshot.display();
 
-    if(bg){background(bg)}
+    
 }
 
 
@@ -115,10 +115,10 @@ async function getBackgroundImage(){
     var hour = datetime.slice(11,13);
 
     if(hour>=06 && hour<=18){
-        bg = "white";
+        bg = "yellow";
     }
     else{
-        bg = "yellow";
+        bg = "black";
     }
    
     //console.log(bg);
